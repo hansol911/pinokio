@@ -32,3 +32,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+##DB 설정 파일
+**/src/test/main/resources/application.properties
