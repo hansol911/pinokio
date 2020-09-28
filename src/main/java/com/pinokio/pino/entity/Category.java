@@ -1,9 +1,9 @@
 package com.pinokio.pino.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,18 +13,36 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-
-@Table(name = "category")
+//@ToString(exclude = "wood")
+//@Table(name = "category")
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int cateNum;
+    private Integer cateNum;
     private String cateName;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonBackReference
     @JoinColumn(name = "wood_num")
     private Wood wood;
 
-    @OneToMany(mappedBy = "category")//(fetch = FetchType.EAGER)
+    //(fetch = FetchType.EAGER) EAGER/LAZY 차이점 알아보기!
+    @OneToMany(mappedBy = "category", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     public List<Product> productList;
+
+    public Integer getCateNum() {
+        return cateNum;
+    }
+
+    public void setCateNum(Integer cateNum) {
+        this.cateNum = cateNum;
+    }
+
+    public String getCateName() {
+        return cateName;
+    }
+
+    public void setCateName(String cateName) {
+        this.cateName = cateName;
+    }
 }
