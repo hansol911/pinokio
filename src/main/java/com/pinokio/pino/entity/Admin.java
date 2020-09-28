@@ -1,8 +1,6 @@
 package com.pinokio.pino.entity;
 
 import lombok.*;
-//import org.hibernate.annotations.Entity;
-//import org.hibernate.annotations.Table;
 
 import javax.persistence.*;
 
@@ -12,7 +10,6 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-//@Table(name = "admin")
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,36 +19,43 @@ public class Admin {
     private String adminName;
     private String phone;
 
+//    @Builder
+//    public Admin(String adminId, String adminPass, String adminName, String phone) {
+//        this.adminId = adminId;
+//        this.adminPass = adminPass;
+//        this.adminName = adminName;
+//        this.phone = phone;
+//    }
+
     public Long getAdminNum() {
         return adminNum;
     }
-
-    public void setAdminNum(Long adminNum) {
-        this.adminNum = adminNum;
+    public void setAdminNum(Long num) {
+        this.adminNum = num;
     }
 
     public String getAdminId() {
         return adminId;
     }
 
-    public void setAdminId(String adminId) {
-        this.adminId = adminId;
+    public void setAdminId(String id) {
+        this.adminId = id;
     }
 
     public String getAdminPass() {
         return adminPass;
     }
 
-    public void setAdminPass(String adminPass) {
-        this.adminPass = adminPass;
+    public void setAdminPass(String pass) {
+        this.adminPass = pass;
     }
 
     public String getAdminName() {
         return adminName;
     }
 
-    public void setAdminName(String adminName) {
-        this.adminName = adminName;
+    public void setAdminName(String name) {
+        this.adminName = name;
     }
 
     public String getPhone() {

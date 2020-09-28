@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,8 +14,6 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-//@ToString(exclude = "wood")
-//@Table(name = "category")
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +23,7 @@ public class Category {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonBackReference
     @JoinColumn(name = "wood_num")
+    @JsonManagedReference // Son Table
     private Wood wood;
 
     //(fetch = FetchType.EAGER) EAGER/LAZY 차이점 알아보기!

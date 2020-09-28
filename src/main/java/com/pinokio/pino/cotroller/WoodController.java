@@ -1,12 +1,8 @@
 package com.pinokio.pino.cotroller;
 
-import com.pinokio.pino.entity.Category;
 import com.pinokio.pino.entity.Wood;
 import com.pinokio.pino.service.WoodService;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,9 +1,6 @@
 package com.pinokio.pino.cotroller;
 
-import com.pinokio.pino.entity.Admin;
 import com.pinokio.pino.entity.Product;
-import com.pinokio.pino.entity.Wood;
-import com.pinokio.pino.service.AdminService;
 import com.pinokio.pino.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

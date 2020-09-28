@@ -1,9 +1,6 @@
 package com.pinokio.pino.service;
 
-import com.pinokio.pino.entity.Admin;
 import com.pinokio.pino.entity.Product;
-import com.pinokio.pino.entity.Wood;
-import com.pinokio.pino.repo.AdminRepo;
 import com.pinokio.pino.repo.ProductRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

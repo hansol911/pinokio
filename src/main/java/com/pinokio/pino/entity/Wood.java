@@ -1,8 +1,10 @@
 package com.pinokio.pino.entity;
 
 import lombok.*;
+import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,8 +13,6 @@ import java.util.Optional;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-//@ToString(exclude = "categoryList")
-//@Table(name = "wood")
 public class Wood {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,4 +37,5 @@ public class Wood {
     public void setWoodName(String woodName) {
         this.woodName = woodName;
     }
+
 }
