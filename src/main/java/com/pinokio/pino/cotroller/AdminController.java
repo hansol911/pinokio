@@ -1,6 +1,7 @@
 package com.pinokio.pino.cotroller;
 
 import com.pinokio.pino.entity.Admin;
+import com.pinokio.pino.entity.Wood;
 import com.pinokio.pino.service.AdminService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,15 +39,10 @@ public class AdminController {
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 
-//    private final AdminRepo adminRepo;
-//
-//    public AdminController(AdminRepo adminRepo) {
-//        this.adminRepo = adminRepo;
-//    }
-//
-//    @GetMapping("/select/{id}")
-//    public List<Admin> findAllAdmin(@PathVariable String id){
-//        return adminRepo.findAll();
-//    }
+    @PutMapping(value = "/{num}")
+    public ResponseEntity<Admin> updateAdmin(@PathVariable Long num, @RequestBody Admin admin) {
+        adminService.updateByAdminNum(num, admin);
+        return new ResponseEntity<Admin>(admin, HttpStatus.OK);
+    }
 
 }

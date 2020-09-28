@@ -22,4 +22,43 @@ public class Admin {
     private String adminName;
     private String phone;
 
+    public Long getAdminNum() {
+        return adminNum;
+    }
+
+    public void setAdminNum(Long adminNum) {
+        this.adminNum = adminNum;
+    }
+
+    public String getAdminId() {
+        return adminId;
+    }
+
+    public void setAdminId(String adminId) {
+        this.adminId = adminId;
+    }
+
+    public String getAdminPass() {
+        return adminPass;
+    }
+
+    public void setAdminPass(String adminPass) {
+        this.adminPass = adminPass;
+    }
+
+    public String getAdminName() {
+        return adminName;
+    }
+
+    public void setAdminName(String adminName) {
+        this.adminName = adminName;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 }

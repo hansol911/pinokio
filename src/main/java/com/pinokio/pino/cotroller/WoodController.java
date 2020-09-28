@@ -3,6 +3,8 @@ package com.pinokio.pino.cotroller;
 import com.pinokio.pino.entity.Category;
 import com.pinokio.pino.entity.Wood;
 import com.pinokio.pino.service.WoodService;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +35,7 @@ public class WoodController {
     }
 
     @PostMapping
-    public ResponseEntity<Wood> save(Wood wood) {
+    public ResponseEntity<Wood> save(@RequestBody Wood wood) {
         return new ResponseEntity<Wood>(woodService.save(wood), HttpStatus.OK);
     }
 
