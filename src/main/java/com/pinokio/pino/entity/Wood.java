@@ -1,12 +1,10 @@
 package com.pinokio.pino.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
-import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Getter
 @Setter
@@ -20,6 +18,7 @@ public class Wood {
     private String woodName;
 
     @OneToMany(mappedBy = "wood", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @JsonBackReference
     private List<Category> categoryList;
 
     public Integer getWoodNum() {

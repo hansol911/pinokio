@@ -19,14 +19,6 @@ public class Admin {
     private String adminName;
     private String phone;
 
-//    @Builder
-//    public Admin(String adminId, String adminPass, String adminName, String phone) {
-//        this.adminId = adminId;
-//        this.adminPass = adminPass;
-//        this.adminName = adminName;
-//        this.phone = phone;
-//    }
-
     public Long getAdminNum() {
         return adminNum;
     }

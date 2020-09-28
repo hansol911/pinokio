@@ -1,11 +1,6 @@
 package com.pinokio.pino.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
-
 import javax.persistence.*;
 
 @Getter
@@ -21,9 +16,7 @@ public class Product {
     private String prodLink;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JsonBackReference
     @JoinColumn(name = "cate_num")
-    @JsonManagedReference //
     private Category category;
 
     public Integer getProdNum() {
