@@ -13,6 +13,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer prodNum;
     private String prodName;
+    private String prodName2;
     private String prodLink;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)

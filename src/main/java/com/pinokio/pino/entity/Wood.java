@@ -16,6 +16,7 @@ public class Wood {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer woodNum;
     private String woodName;
+    private String woodName2;
 
     @OneToMany(mappedBy = "wood", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JsonBackReference

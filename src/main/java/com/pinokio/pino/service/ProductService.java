@@ -21,6 +21,10 @@ public class ProductService {
         return productRepo.findAll();
     }
 
+    public List<Product> findByProdCateNum(Integer cateNum) {
+        return productRepo.findByCategory_cateNum(cateNum);
+    }
+
     public Optional<Product> findByProductNum(Integer num) {
         Optional<Product> product = productRepo.findById(num);
         return product;
