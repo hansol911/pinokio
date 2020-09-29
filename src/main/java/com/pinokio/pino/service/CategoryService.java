@@ -29,6 +29,10 @@ public class CategoryService {
         return category;
     }
 
+    public List<Category> findByWoodNum(Integer woodNum){
+        return categoryRepo.findByWood_woodNum(woodNum);
+    }
+
     public Category save(Category category) {
         categoryRepo.save(category);
         return category;
@@ -46,4 +50,5 @@ public class CategoryService {
             categoryRepo.save(category);
         }
     }
+
 }

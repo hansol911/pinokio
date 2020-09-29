@@ -77,6 +77,8 @@ public class AdminController {
             new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
         }
 
+        session.setAttribute("user", member);
+        System.out.println("session 담김");
         return new ResponseEntity("로그인 성공", HttpStatus.OK);
     }
 
