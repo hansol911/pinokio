@@ -1,9 +1,6 @@
 package com.pinokio.pino.service;
 
-import com.pinokio.pino.entity.Admin;
 import com.pinokio.pino.entity.Category;
-import com.pinokio.pino.entity.Wood;
-import com.pinokio.pino.repo.AdminRepo;
 import com.pinokio.pino.repo.CategoryRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,7 +26,7 @@ public class CategoryService {
         return category;
     }
 
-    public List<Category> findByWoodNum(Integer woodNum){
+    public List<Category> findByCateWoodNum(Integer woodNum) {
         return categoryRepo.findByWood_woodNum(woodNum);
     }
 
@@ -50,5 +47,4 @@ public class CategoryService {
             categoryRepo.save(category);
         }
     }
-
 }

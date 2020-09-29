@@ -3,6 +3,7 @@ package com.pinokio.pino.cotroller;
 import com.pinokio.pino.entity.Category;
 
 import com.pinokio.pino.service.CategoryService;
+import org.hibernate.dialect.Ingres9Dialect;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,11 +37,10 @@ public class CategoryController {
     //카테고리 WOODNUM 조회
     @GetMapping(value = "/woods/{woodNum}")
     public ResponseEntity<List<Category>> getCategoryByWoodNum(@PathVariable Integer woodNum) {
-        List<Category> category =categoryService.findByWoodNum(woodNum);
+        List<Category> category =categoryService.findByCateWoodNum(woodNum);
         return new ResponseEntity<List<Category>>(category, HttpStatus.OK);
     }
 
-    //카테고리 추가
     @PostMapping
     public ResponseEntity<Category> save(Category category) {
         return new ResponseEntity<Category>(categoryService.save(category), HttpStatus.OK);
