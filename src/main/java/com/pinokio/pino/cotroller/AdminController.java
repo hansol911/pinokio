@@ -67,13 +67,13 @@ public class AdminController {
     // @RequestBody는 Json으로 받은 요청을 MessageConverter를 통해 Java 객체로 변환
     public ResponseEntity login(@RequestBody LoginVo loginVo, HttpSession session){
 
-        Optional<Admin> member = adminService.findByAdminId(loginVo.getUserId());
+        Optional<Admin> member = adminService.findByAdminId(loginVo.getAdminId());
 
         if(member.isPresent()){//Id찾기 null인경우
             new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
         }
 
-        if(!loginVo.getUserPass().equals(member.get().getAdminPass())){//pass가 다른 경우
+        if(!loginVo.getAdminPass().equals(member.get().getAdminPass())){//pass가 다른 경우
             new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
         }
 

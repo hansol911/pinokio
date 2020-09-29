@@ -4,17 +4,17 @@ public class LoginVo {
     private String adminId;
     private String adminPass;
 
-    public String getUserId() {
-        return userId;
+    public String getAdminId() {
+        return adminId;
     }
-    public void setUserId(String id) {
-        this.userId = id;
+    public void setAdminId(String id) {
+        this.adminId = id;
     }
 
-    public String getUserPass() {
-        return userId;
+    public String getAdminPass() {
+        return adminPass;
     }
-    public void setUserPass(String pass) {
-        this.userPass = pass;
+    public void setAdminPass(String pass) {
+        this.adminPass = pass;
     }
 }
