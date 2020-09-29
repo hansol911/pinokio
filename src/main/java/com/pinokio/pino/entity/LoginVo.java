@@ -1,8 +1,8 @@
 package com.pinokio.pino.entity;
 
 public class LoginVo {
-    private String userId;
-    private String userPass;
+    private String adminId;
+    private String adminPass;
 
     public String getUserId() {
         return userId;
