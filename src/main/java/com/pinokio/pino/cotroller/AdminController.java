@@ -1,12 +1,15 @@
 package com.pinokio.pino.cotroller;
 
 import com.pinokio.pino.entity.Admin;
+import com.pinokio.pino.entity.LoginVo;
 import com.pinokio.pino.service.AdminService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.HttpSessionRequiredException;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,8 +49,6 @@ public class AdminController {
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 
-    // 회원 로그인
-
     // 회원 추가
     @PostMapping()
     public ResponseEntity<Admin> save(@RequestBody Admin member){
@@ -60,4 +61,32 @@ public class AdminController {
         adminService.updateById(num, member);
     return new ResponseEntity<Admin>(member, HttpStatus.OK);
     }
+
+    //로그인
+    @PostMapping(value = "/login")
+    // @RequestBody는 Json으로 받은 요청을 MessageConverter를 통해 Java 객체로 변환
+    public ResponseEntity login(@RequestBody LoginVo loginVo, HttpSession session){
+
+        Optional<Admin> member = adminService.findByAdminId(loginVo.getUserId());
+
+        if(member.isPresent()){//Id찾기 null인경우
+            new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+
+        if(!loginVo.getUserPass().equals(member.get().getAdminPass())){//pass가 다른 경우
+            new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity("로그인 성공", HttpStatus.OK);
+    }
+
+    //로그아웃
+
+    //비밀번호 찾기
+    /**
+     * 1. 아이디 Check
+     * 2. admin name, admin_phone Check
+     * 3. 비밀번호 update
+     * */
+
 }

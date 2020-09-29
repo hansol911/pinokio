@@ -21,30 +21,34 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-
+    //카테고리 전체 조회
     @GetMapping
     public ResponseEntity<List<Category>> getAllCategory(){
         List<Category> category = categoryService.findAllAdmin();
         return new ResponseEntity<List<Category>>(category, HttpStatus.OK);
     }
 
+    //카테고리 NUM 조회
     @GetMapping(value = "/{num}")
     public ResponseEntity<Category> getCategory(@PathVariable Integer num) {
         Optional<Category> category =categoryService.findByCategoryNum(num);
         return new ResponseEntity<Category>(category.get(), HttpStatus.OK);
     }
 
+    //카테고리 추가
     @PostMapping
     public ResponseEntity<Category> save(Category category) {
         return new ResponseEntity<Category>(categoryService.save(category), HttpStatus.OK);
     }
 
+    //카테고리 NUM 삭제
     @DeleteMapping(value = "/{num}")
     public ResponseEntity<Void> deleteCategory(@PathVariable Integer num){
         categoryService.deleteByCategoryNum(num);
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 
+    //카테고리 NUM 수정
     @PutMapping(value = "/{num}")
     public ResponseEntity<Category> updateCategory(@PathVariable Integer num, @RequestBody Category category) {
         categoryService.updateByCategoryNum(num, category);

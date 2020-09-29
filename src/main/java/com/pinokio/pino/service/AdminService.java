@@ -61,5 +61,12 @@ public class AdminService {
         adminRepository.deleteById(num);
     }
 
+    //비밀번호 찾기
+    /**
+     * 1. 아이디 Check
+     * 2. admin name, admin_phone Check
+     * 3. 비밀번호 update
+     * */
+
 }
 
