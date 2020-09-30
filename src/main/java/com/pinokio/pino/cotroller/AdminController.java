@@ -69,12 +69,13 @@ public class AdminController {
 
         Optional<Admin> member = adminService.findByAdminId(loginVo.getAdminId());
 
-        if(member.isPresent()){//Id찾기 null인경우
-            new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        if(!member.isPresent()){//Id찾기
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
         }
 
         if(!loginVo.getAdminPass().equals(member.get().getAdminPass())){//pass가 다른 경우
-            new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+            System.out.println("비밀번호 틀림"+member.get().getAdminPass());
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
         }
 
         session.setAttribute("user", member);
