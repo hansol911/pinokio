@@ -8,5 +8,4 @@ import java.util.List;
 
 public interface ProductRepo extends JpaRepository<Product, Integer> {
     List findByCategory_cateNum(@Param(value = "cate_num") Integer cateNum);
-
 }

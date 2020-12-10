@@ -13,5 +13,4 @@ public interface AdminRepo extends JpaRepository<Admin, Long> {
 
     //아이디 조회
     Optional<Admin> findByAdminId(String adminId);
-
 }
