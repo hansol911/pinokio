@@ -1,6 +1,5 @@
-package com.pinokio.pino.repo;
+package com.pinokio.pino.api.wood;
 
-import com.pinokio.pino.entity.Wood;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface WoodRepo extends JpaRepository<Wood, Integer> {

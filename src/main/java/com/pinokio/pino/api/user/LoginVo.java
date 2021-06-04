@@ -1,4 +1,4 @@
-package com.pinokio.pino.entity;
+package com.pinokio.pino.api.user;
 
 public class LoginVo {
     private String adminId;

@@ -1,6 +1,5 @@
-package com.pinokio.pino.repo;
+package com.pinokio.pino.api.user;
 
-import com.pinokio.pino.entity.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import org.springframework.stereotype.Repository;

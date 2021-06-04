@@ -1,7 +1,5 @@
-package com.pinokio.pino.cotroller;
+package com.pinokio.pino.api.wood;
 
-import com.pinokio.pino.entity.Wood;
-import com.pinokio.pino.service.WoodService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,5 @@
-package com.pinokio.pino.cotroller;
+package com.pinokio.pino.api.product;
 
-import com.pinokio.pino.entity.Category;
-import com.pinokio.pino.entity.Product;
-import com.pinokio.pino.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

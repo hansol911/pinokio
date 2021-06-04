@@ -1,7 +1,5 @@
-package com.pinokio.pino.service;
+package com.pinokio.pino.api.category;
 
-import com.pinokio.pino.entity.Category;
-import com.pinokio.pino.repo.CategoryRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

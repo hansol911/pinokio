@@ -1,7 +1,5 @@
-package com.pinokio.pino.service;
+package com.pinokio.pino.api.user;
 
-import com.pinokio.pino.entity.Admin;
-import com.pinokio.pino.repo.AdminRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,12 +1,8 @@
-package com.pinokio.pino.cotroller;
+package com.pinokio.pino.api.user;
 
-import com.pinokio.pino.entity.Admin;
-import com.pinokio.pino.entity.LoginVo;
-import com.pinokio.pino.service.AdminService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.HttpSessionRequiredException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;

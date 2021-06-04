@@ -1,7 +1,5 @@
-package com.pinokio.pino.service;
+package com.pinokio.pino.api.wood;
 
-import com.pinokio.pino.entity.Wood;
-import com.pinokio.pino.repo.WoodRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

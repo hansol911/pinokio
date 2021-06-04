@@ -1,8 +1,5 @@
-package com.pinokio.pino.service;
+package com.pinokio.pino.api.product;
 
-import com.pinokio.pino.entity.Category;
-import com.pinokio.pino.entity.Product;
-import com.pinokio.pino.repo.ProductRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

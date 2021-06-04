@@ -1,6 +1,8 @@
-package com.pinokio.pino.entity;
+package com.pinokio.pino.api.category;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.pinokio.pino.api.product.Product;
+import com.pinokio.pino.api.wood.Wood;
 import lombok.*;
 
 import javax.persistence.*;

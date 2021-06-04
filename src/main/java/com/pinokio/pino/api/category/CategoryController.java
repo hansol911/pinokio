@@ -1,9 +1,5 @@
-package com.pinokio.pino.cotroller;
+package com.pinokio.pino.api.category;
 
-import com.pinokio.pino.entity.Category;
-
-import com.pinokio.pino.service.CategoryService;
-import org.hibernate.dialect.Ingres9Dialect;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

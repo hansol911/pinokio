@@ -1,5 +1,6 @@
-package com.pinokio.pino.entity;
+package com.pinokio.pino.api.product;
 
+import com.pinokio.pino.api.category.Category;
 import lombok.*;
 import javax.persistence.*;
 

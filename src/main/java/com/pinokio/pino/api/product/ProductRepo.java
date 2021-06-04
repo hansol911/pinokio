@@ -1,6 +1,5 @@
-package com.pinokio.pino.repo;
+package com.pinokio.pino.api.product;
 
-import com.pinokio.pino.entity.Product;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
 
