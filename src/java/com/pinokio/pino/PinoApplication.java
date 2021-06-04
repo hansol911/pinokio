@@ -10,7 +10,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @EnableJpaRepositories
 @SpringBootApplication
-//@RestController
 public class PinoApplication {
 
     public static void main(String[] args) {
