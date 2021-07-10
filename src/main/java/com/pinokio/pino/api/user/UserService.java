@@ -37,7 +37,7 @@ public class UserService {
     public UserDTO updateUser(UserCommand.updateUser userCommand, Long userId) {
         User user = userRepo.findById(userId).orElseThrow(() -> new UserNotFoundException("user not found"));
         user.setPassword("{noop}" + passwordEncoder.encode(userCommand.getPassword()));
-        return UserDTO.toDTO(userRepo.save(user));
+        return UserDTO.toDTO(userRepo.save(userCommand.toUser(user)));
     }
 
 
